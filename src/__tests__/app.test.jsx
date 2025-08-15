@@ -1,6 +1,8 @@
 import {fireEvent, render,screen} from '@testing-library/react'
 
 import App from '../App'
+import '@testing-library/jest-dom'; // 👈 add this
+
 import { expect } from 'vitest';
 
 test('increments count on button click', () => {
