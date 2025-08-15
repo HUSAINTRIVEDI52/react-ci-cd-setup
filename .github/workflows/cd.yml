@@ -1,0 +1,14 @@
+name: "CD Pipeline"
+
+on:
+    workflow_run:
+        workflows: "Sample react ci pipeline/workflow"
+        types:
+            - completed
+
+jobs: 
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            
