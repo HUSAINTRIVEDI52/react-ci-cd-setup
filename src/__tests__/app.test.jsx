@@ -21,3 +21,4 @@ test('increments count on button click', () => {
   fireEvent.click(buttonElement);
   expect(buttonElement).toHaveTextContent('count is 3');
 });
+ 
