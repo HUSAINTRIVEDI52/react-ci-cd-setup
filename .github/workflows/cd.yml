@@ -11,4 +11,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            
+            - name: "Download build files"
+              uses: actions/download-artifact@4
+              with:
+                name: build
