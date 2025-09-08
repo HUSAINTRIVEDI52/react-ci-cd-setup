@@ -2,10 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Clean Workspace') {
-      steps {
-        deleteDir()  // deletes all files/folders in workspace
-      }
-    }
+  
     stage('Build') {
         agent {
           docker {
