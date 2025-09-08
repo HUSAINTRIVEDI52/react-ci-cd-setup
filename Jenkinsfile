@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Clean Workspace') {
   
     stage('Build') {
         agent {
@@ -21,6 +20,7 @@ pipeline {
           '''
         }
     }
-  }
+  
+}
 }
 
