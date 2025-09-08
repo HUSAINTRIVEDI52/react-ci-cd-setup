@@ -11,7 +11,7 @@ pipeline {
         steps {
           sh ''' 
           ls -l
-          node -version
+          node --version
           npm --version
           npm install
           npm run build
