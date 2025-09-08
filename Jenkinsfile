@@ -1,30 +1,30 @@
 pipeline {
   agent any
   stages {
-    stage('Clean') {
+     stage('Clean Workspace') {
       steps {
-        deleteDir()  // Wipe workspace to prevent leftovers
+deletedir()
       }
     }
     stage('Build') {
-      agent {
-        docker {
-          image 'node:20-alpine'
-          args '-u root'  // Run as root to fix permissions and process startup
-          reuseNode true
+        agent {
+          docker {
+            image 'node:20-alpine'
+            reuseNode true 
+          }
         }
-      }
-      steps {
-        sh '''
+        steps {
+          sh ''' 
           ls -l
-          npm config set cache $PWD/.npm-cache --global  // Local cache avoids EACCES
-          npm ci --ignore-scripts  // Clean, reproducible install
+          npm install
           npm run build
           node --version
           npm --version
           ls -l
-        '''
-      }
+          '''
+        }
     }
-  }
+  
 }
+}
+
