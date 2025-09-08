@@ -1,7 +1,11 @@
 pipeline {
   agent any
   stages {
-  
+     stage('Clean Workspace') {
+      steps {
+        sh 'rm -rf node_modules build'
+      }
+    }
     stage('Build') {
         agent {
           docker {
