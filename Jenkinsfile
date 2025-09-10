@@ -16,10 +16,10 @@ deleteDir()
         steps {
           sh ''' 
           ls -l
-          npm ci
-          npm run build
           node --version
           npm --version
+           npm install
+          npm run build
           ls -l
           '''
         }
