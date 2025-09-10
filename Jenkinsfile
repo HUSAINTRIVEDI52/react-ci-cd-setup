@@ -19,6 +19,11 @@ pipeline {
           '''
         }
     }
+    tage('Clean Workspace') {
+      steps {
+deleteDir()
+      }
+    }
   
 }
 }
