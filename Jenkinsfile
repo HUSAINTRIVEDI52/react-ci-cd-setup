@@ -19,11 +19,7 @@ pipeline {
           '''
         }
     }
-    stage('Clean Workspace') {
-      steps {
-deleteDir()
-      }
-    }
+  
   
 }
 }
